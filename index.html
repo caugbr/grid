@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Icons -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png"> -->
+  
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> -->
+  <!-- <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <meta charset="utf-8">
+  <title>Grid</title>
+  <meta name="description" content="" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <!--Keywords -->
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+
+  <link rel="stylesheet" href="src/css/grid.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@400;800;900&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1"><script defer src="main.c5f6a632f93a3e9e33cb.js"></script></head>
+
+<body class="page page-home">
+  <div class="view-breakpoint"></div>
+  <main>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <h1>Grid</h1>
+
+          <p>
+            A simple CSS grid using SASS and flexbox
+          </p>
+
+					<h3>Variables</h3>
+					<ul>
+						<li>
+							<code>$grid-min-width</code> &rarr; Max width (.container)
+						</li>
+						<li>
+							<code>$grid-max-width</code> &rarr; Min width (.container)
+						</li>
+						<li>
+							<code>$grid-gutter</code> &rarr; Space between the columns
+						</li>
+						<li>
+							<code>$grid-cols</code> &rarr; Number of columns
+						</li>
+						<li>
+							<code>$breakpoints</code> &rarr; Breakpoints
+						</li>
+						<li>
+							<code>$breakpoint-beyond</code> &rarr; Name for the last breakpoint
+						</li>
+					</ul>
+
+          <h3>Classes you can use in your row to adjust columns (*)</h3>
+          <ul>
+            <li>
+              <code>no-gutter</code> &rarr; Remove the defined gap (<code>$grid-gutter</code>)
+            </li>
+            <li>
+              <code>left</code> &rarr; Align items on left (if the number of columns is minor than <code>$grid-cols</code>)
+            </li>
+            <li>
+              <code>left-BP</code> &rarr; Align items on left only while in the breakpoint BP
+            </li>
+            <li>
+              <code>center</code> &rarr; Align items on center (if the number of columns is minor than <code>$grid-cols</code>)
+            </li>
+            <li>
+              <code>center-BP</code> &rarr; Align items on center only while in the breakpoint BP
+            </li>
+            <li>
+              <code>right</code> &rarr; Align items on right (if the number of columns is minor than <code>$grid-cols</code>)
+            </li>
+            <li>
+              <code>right-BP</code> &rarr; Align items on right only while in the breakpoint BP
+            </li>
+            <li>
+              <code>between</code> &rarr; Space between items (if the number of columns is minor than <code>$grid-cols</code>)
+            </li>
+            <li>
+              <code>between-BP</code> &rarr; Space between items only while in the breakpoint BP
+            </li>
+            <li>
+              <code>around</code> &rarr; Space around items (if the number of columns is minor than <code>$grid-cols</code>)
+            </li>
+            <li>
+              <code>around-BP</code> &rarr; Space around items only while in the breakpoint BP
+            </li>
+          </ul>
+        
+          <h3>Classes you can use in your columns (*)</h3>
+          <ul>
+            <li>
+              <code>col</code> &rarr; Create a resizable column; if you use this class for all columns, they will have equal widths
+            </li>
+            <li>
+              <code>col-N</code> &rarr; Creates an element covering N columns of <code>$grid-cols</code>
+            </li>
+            <li>
+              <code>col-N-BP</code> &rarr; Creates an element covering N columns of <code>$grid-cols</code> only while in the breakpoint BP
+            </li>
+            <li>
+              <code>col-0</code> &rarr; Hide the column
+            </li>
+            <li>
+              <code>col-0-BP</code> &rarr; Hide the column only while in the breakpoint BP
+            </li>
+            <li>
+              <code>order-ON</code> &rarr; Defines the property order to ON
+            </li>
+            <li>
+              <code>order-ON-BP</code> &rarr; Defines the property order to ON only while in the breakpoint BP
+            </li>
+          </ul>
+        
+          <p>
+            * "N" is a number from zero to $grid-cols<br>
+            * "BP" is the breakpoint name (one of the indexes on $breakpoints map or $breakpoint-beyond)<br>
+            * "ON" is the number to set property "order"
+          </p>
+        
+          <h3>Breakpoints</h3>
+          <p>
+            Our breakpoints are exclusionary. The rules set for some size will not be overwritten by the next one.
+            Each breakpoint value sets the upper bound of a range from the last processed value (or zero
+            for the first value). So, since it excludes any width beyond the last breakpoint, there is another breakpoint
+            name, defined in $breakpoint-beyond which will be valid from the last defined breakpoint plus 1px.
+            That's why we need the values in $breakpoints to be sorted in ascending order. Implicitly $breakpoints
+            starts from zero and the added breakpoint includes every width greater than the last value.
+          </p>
+      
+          <div class="the-grid">
+            <h3>Examples</h3>
+            <strong>Equal widths</strong>
+            <div class="container equal-widths">
+              <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+              </div>
+            </div>
+            <strong>Defined sizes</strong>
+            <div class="container cells-1">
+              <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6"></div>
+                <div class="col-3"></div>
+              </div>
+            </div>
+            <strong>Change sizes by breakpoint</strong>
+            <div class="container cells-2">
+              <div class="row">
+                <div class="col-3 col-5-sm"></div>
+                <div class="col-6 col-2-sm"></div>
+                <div class="col-3 col-5-sm"></div>
+              </div>
+            </div>
+            <strong>Change order by breakpoint</strong>
+            <div class="container cells-3">
+              <div class="row">
+                <div class="col-2 order-3-md"></div>
+                <div class="col order-1-md"></div>
+                <div class="col-6 order-2-md"></div>
+              </div>
+            </div>
+            <strong>Hide columns by breakpoint</strong>
+            <div class="container cells-4">
+              <div class="row">
+                <div class="col-0 col-4-xl col-4-xxl"></div>
+                <div class="col-12 col-4-xl col-4-xxl"></div>
+                <div class="col-0 col-4-xl col-4-xxl"></div>
+              </div>
+            </div>
+            <strong>No gutter</strong>
+            <div class="container cells-5">
+              <div class="row no-gutter">
+                <div class="col-3"></div>
+                <div class="col-6"></div>
+                <div class="col-3"></div>
+              </div>
+            </div>
+            <strong>Offset</strong>
+            <div class="container cells-6">
+              <div class="row">
+                <div class="col-1 offset-11"></div>
+              </div>
+              <div class="row">
+                <div class="col-2 offset-10"></div>
+              </div>
+              <div class="row">
+                <div class="col-3 offset-9"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 offset-8"></div>
+              </div>
+              <div class="row">
+                <div class="col-5 offset-7"></div>
+              </div>
+              <div class="row">
+                <div class="col-6 offset-6"></div>
+              </div>
+              <div class="row">
+                <div class="col-7 offset-5"></div>
+              </div>
+              <div class="row">
+                <div class="col-8 offset-4"></div>
+              </div>
+              <div class="row">
+                <div class="col-9 offset-3"></div>
+              </div>
+              <div class="row">
+                <div class="col-10 offset-2"></div>
+              </div>
+              <div class="row">
+                <div class="col-11 offset-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-12"></div>
+              </div>
+            </div>
+            <strong>Align on left</strong>
+            <div class="container cells-7">
+              <div class="row left">
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+            <strong>Align on center</strong>
+            <div class="container cells-8">
+              <div class="row center">
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+            <strong>Align on right</strong>
+            <div class="container cells-9">
+              <div class="row right">
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+            <strong>Change aligment by breakpoint</strong>
+            <div class="container cells-10">
+              <div class="row left right-lg right-xl">
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+            <strong>Space around</strong>
+            <div class="container cells-11">
+              <div class="row around">
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+            <strong>Space between</strong>
+            <div class="container cells-12">
+              <div class="row between">
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+            <strong>Change space by breakpoint</strong>
+            <div class="container cells-13">
+              <div class="row between around-lg around-xl">
+                <div class="col-2"></div>
+                <div class="col-4"></div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

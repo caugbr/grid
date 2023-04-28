@@ -34,8 +34,8 @@ A simple CSS grid using SASS and flexbox
 `order-ON` → Defines the property order to ON\
 `order-ON-BP` → Defines the property order to ON only while in the breakpoint BP
 
-*(\*) "N" is a number from zero to $grid-cols*
-*(\*) "BP" is the breakpoint name (one of the indexes on $breakpoints map or $breakpoint-beyond)*
+*(\*) "N" is a number from zero to $grid-cols*\
+*(\*) "BP" is the breakpoint name (one of the indexes on $breakpoints map or $breakpoint-beyond)*\
 *(\*) "ON" is the number to set property "order"*
 
 ### Breakpoints

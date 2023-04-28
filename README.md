@@ -3,8 +3,8 @@ A simple CSS grid using SASS and flexbox
 
 ### Variables
 
-    $grid-minwidth` → Max width (.container)
-    $grid-maxwidth` → Min width (.container)
+    $grid-minwidth → Max width (.container)
+    $grid-maxwidth → Min width (.container)
     $grid-gutter → Space between the columns
     $grid-cols → Number of columns
     $breakpoints → Breakpoints
@@ -12,23 +12,23 @@ A simple CSS grid using SASS and flexbox
 
 ### Classes you can use in your row to adjust columns (*)
 
-    no-gutter → Remove the defined gap (`$grid-gutter`)
-    left → Align items on left (if the number of columns is minor than  `$grid-cols`)
+    no-gutter → Remove the defined gap ($grid-gutter)
+    left → Align items on left (if the number of columns is minor than  $grid-cols)
     left-BP → Align items on left only while in the breakpoint BP
-    center → Align items on center (if the number of columns is minor than  `$grid-cols`)
+    center → Align items on center (if the number of columns is minor than  $grid-cols)
     center-BP → Align items on center only while in the breakpoint BP
-    right → Align items on right (if the number of columns is minor than  `$grid-cols`)
+    right → Align items on right (if the number of columns is minor than  $grid-cols)
     right-BP → Align items on right only while in the breakpoint BP
-    between → Space between items (if the number of columns is minor than  `$grid-cols`)
+    between → Space between items (if the number of columns is minor than  $grid-cols)
     between-BP → Space between items only while in the breakpoint BP
-    around → Space around items (if the number of columns is minor than  `$grid-cols`)
+    around → Space around items (if the number of columns is minor than  $grid-cols)
     around-BP → Space around items only while in the breakpoint BP
 
 ### Classes you can use in your columns (*)
 
     col → Create a resizable column; if you use this class for all columns, they will have equal widths
-    col-N → Creates an element covering N columns of  `$grid-cols`
-    col-N-BP → Creates an element covering N columns of  `$grid-cols`  only while in the breakpoint BP
+    col-N → Creates an element covering N columns of  $grid-cols
+    col-N-BP → Creates an element covering N columns of  $grid-cols  only while in the breakpoint BP
     col-0 → Hide the column
     col-0-BP → Hide the column only while in the breakpoint BP
     order-ON → Defines the property order to ON

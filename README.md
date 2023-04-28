@@ -13,15 +13,15 @@ A simple CSS grid using SASS and flexbox
 ### Classes you can use in your row to adjust columns (*)
 
     no-gutter → Remove the defined gap ($grid-gutter)
-    left → Align items on left (if the number of columns is minor than  $grid-cols)
+    left → Align items on left (if the number of columns is minor than $grid-cols)
     left-BP → Align items on left only while in the breakpoint BP
-    center → Align items on center (if the number of columns is minor than  $grid-cols)
+    center → Align items on center (if the number of columns is minor than $grid-cols)
     center-BP → Align items on center only while in the breakpoint BP
-    right → Align items on right (if the number of columns is minor than  $grid-cols)
+    right → Align items on right (if the number of columns is minor than $grid-cols)
     right-BP → Align items on right only while in the breakpoint BP
-    between → Space between items (if the number of columns is minor than  $grid-cols)
+    between → Space between items (if the number of columns is minor than $grid-cols)
     between-BP → Space between items only while in the breakpoint BP
-    around → Space around items (if the number of columns is minor than  $grid-cols)
+    around → Space around items (if the number of columns is minor than $grid-cols)
     around-BP → Space around items only while in the breakpoint BP
 
 ### Classes you can use in your columns (*)

@@ -8,7 +8,7 @@ A simple CSS grid using SASS and flexbox
 `$grid-gutter` → Space between the columns\
 `$grid-cols` → Number of columns\
 `$breakpoints` → Breakpoints\
-`$breakpoint-beyond` → Name for the last breakpoint\
+`$breakpoint-beyond` → Name for the last breakpoint
 
 ### Classes you can use in your row to adjust columns (*)
 
@@ -32,7 +32,7 @@ A simple CSS grid using SASS and flexbox
 `col-0` → Hide the column\
 `col-0-BP` → Hide the column only while in the breakpoint BP\
 `order-ON` → Defines the property order to ON\
-`order-ON-BP` → Defines the property order to ON only while in the breakpoint BP\
+`order-ON-BP` → Defines the property order to ON only while in the breakpoint BP
 
 (\*) "N" is a number from zero to $grid-cols  
 (\*) "BP" is the breakpoint name (one of the indexes on $breakpoints map or $breakpoint-beyond)  

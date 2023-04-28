@@ -34,7 +34,7 @@
   }
 
   @for $i from 1 through calc($grid-cols - 1) {
-    $width: to-fixed(calc(100% / calc($grid-cols / $i)) - ($gap * calc(($grid-cols - $i) / $grid-cols)), 4);
+    $width: to-fixed(math.div(100%, math.div($grid-cols, $i)) - ($gap * math.div(($grid-cols - $i), $grid-cols)), 4);
     .col-#{$i}#{$sufix} {
       @include col-def-rules($width);
     }
@@ -82,14 +82,6 @@
 }
 
 @function to-fixed($float, $digits: 2) {
-  $sass-precision: 5;
-  
-  @if $digits > $sass-precision {
-    @warn "Sass sets default precision to #{$sass-precision} digits, and there is no way to change that for now."
-    + "The returned number will have #{$sass-precision} digits, even if you asked for `#{$digits}`."
-    + "See https://github.com/sass/sass/issues/1122 for further informations.";
-  }
-  
   $pow: math.pow(10, $digits);
-  @return math.round($float * $pow) / $pow;
+  @return math.div(math.round($float * $pow), $pow);
 }

@@ -3,12 +3,12 @@ A simple CSS grid using SASS and flexbox
 
 ### Variables
 
-`$grid-min-width`  → Max width (.container)
-`$grid-max-width`  → Min width (.container)
-`$grid-gutter`  → Space between the columns
-`$grid-cols`  → Number of columns
-`$breakpoints`  → Breakpoints
-`$breakpoint-beyond`  → Name for the last breakpoint
+    `$grid-min-width`  → Max width (.container)
+    `$grid-max-width`  → Min width (.container)
+    `$grid-gutter`  → Space between the columns
+    `$grid-cols`  → Number of columns
+    `$breakpoints`  → Breakpoints
+    `$breakpoint-beyond`  → Name for the last breakpoint
 
 ### Classes you can use in your row to adjust columns (*)
 

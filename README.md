@@ -26,13 +26,13 @@ A simple CSS grid using SASS and flexbox
 
 ### Classes you can use in your columns (*)
 
-col → Create a resizable column; if you use this class for all columns, they will have equal widths
-col-N → Creates an element covering N columns of  `$grid-cols`
-col-N-BP → Creates an element covering N columns of  `$grid-cols`  only while in the breakpoint BP
-col-0 → Hide the column
-col-0-BP → Hide the column only while in the breakpoint BP
-order-ON → Defines the property order to ON
-order-ON-BP → Defines the property order to ON only while in the breakpoint BP
+    col → Create a resizable column; if you use this class for all columns, they will have equal widths
+    col-N → Creates an element covering N columns of  `$grid-cols`
+    col-N-BP → Creates an element covering N columns of  `$grid-cols`  only while in the breakpoint BP
+    col-0 → Hide the column
+    col-0-BP → Hide the column only while in the breakpoint BP
+    order-ON → Defines the property order to ON
+    order-ON-BP → Defines the property order to ON only while in the breakpoint BP
 
 (\*) "N" is a number from zero to $grid-cols  
 (\*) "BP" is the breakpoint name (one of the indexes on $breakpoints map or $breakpoint-beyond)  

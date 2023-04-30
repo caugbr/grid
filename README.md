@@ -21,7 +21,7 @@ A simple CSS grid using SASS and flexbox
 `right-BP` → Align items on right only while in the breakpoint BP\
 `between` → Space between items (if the number of columns is minor than  `$grid-cols`)\
 `between-BP` → Space between items only while in the breakpoint BP\
-`around` → Space around items (if the number of columns is minor than  `$grid-cols`)
+`around` → Space around items (if the number of columns is minor than  `$grid-cols`)\
 `around-BP` → Space around items only while in the breakpoint BP
 
 ### Classes you can use in your columns (*)

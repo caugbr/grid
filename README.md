@@ -12,7 +12,7 @@ A simple CSS grid using SASS and flexbox
 
 ### Classes you can use in your row to adjust columns (*)
 
-`no-gutter` → Remove the defined gap (`$grid-gutter`)
+`no-gutter` → Remove the defined gap (`$grid-gutter`)\
 `left` → Align items on left (if the number of columns is minor than  `$grid-cols`)\
 `left-BP` → Align items on left only while in the breakpoint BP\
 `center` → Align items on center (if the number of columns is minor than  `$grid-cols`)\
